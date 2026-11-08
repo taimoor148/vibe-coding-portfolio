@@ -125,3 +125,59 @@
 @media (max-width: 380px) {
   .process-grid { grid-template-columns: 1fr; }
 }
+
+/* The CRM illustration has its own title. Keep the project name in the card
+   copy and reserve a separate bottom corner for the link arrow. */
+.project-visual:has(.product-art.leadpilot) .preview-overlay {
+  display: none;
+}
+
+.project-visual .product-art.leadpilot {
+  position: absolute;
+  inset: 32px 0 0;
+  height: auto;
+  padding: 12px 14px 64px;
+  background: radial-gradient(ellipse at 80% 0, #254d78, #0b1524 70%);
+}
+
+.leadpilot .crm-art {
+  width: min(100%, 390px);
+  height: 100%;
+  max-height: 230px;
+  min-height: 0;
+  transform: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.leadpilot .crm-side {
+  flex: 0 0 clamp(25px, 8%, 42px);
+  align-items: center;
+  padding: 8px 0;
+  gap: clamp(5px, 1vw, 13px);
+}
+
+.leadpilot .crm-main {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  align-content: stretch;
+  gap: 4px;
+  padding: clamp(6px, 1.5vw, 16px);
+}
+
+.leadpilot .crm-main h3 {
+  font-size: clamp(13px, 3.7vw, 27px);
+  line-height: 1.15;
+  letter-spacing: -.03em;
+  margin: 0;
+}
+
+.leadpilot .crm-bars {
+  height: auto;
+  min-height: 0;
+  gap: clamp(4px, 1.25vw, 12px);
+}
+
+.leadpilot .crm-bars b { flex: 1; min-width: 0; max-width: 36px; }
