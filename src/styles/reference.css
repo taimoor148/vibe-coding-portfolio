@@ -15,3 +15,113 @@
 .scroll-sculpture,.motion-toggle{display:none!important}.contact-channels{display:flex;align-items:center;flex-wrap:wrap;gap:12px}.contact-channels>.text-link{margin-left:5px}.contact-details{display:flex;flex-direction:column;gap:18px;margin-top:26px}.contact-details>a{font-size:15px;color:#c2ddf8;line-height:1.6;overflow-wrap:anywhere;width:fit-content;max-width:100%}.contact-details>a>span{display:block;color:#829bb6;font-size:11px;margin-bottom:4px;letter-spacing:.6px}.contact-details>a:hover{color:#fff}.site-footer{display:block;width:100%;max-width:none;padding:0;margin:0;border-top:1px solid #91caff29;background:#080d15;overflow:visible}.site-footer>.footer-inner{box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:35px;width:100%;max-width:1320px;margin:0 auto;padding:34px var(--page-gutter) 26px}.footer-identity{min-width:0}.footer-identity .brand-name{font-size:20px;font-weight:500;letter-spacing:-.6px}.footer-identity .brand img{width:40px;height:40px}.footer-identity>p{font-size:12px;line-height:1.8;color:#8fa4bb;margin:12px 0 0}.site-footer .footer-links{display:flex;align-items:center;gap:25px;flex-wrap:wrap;font-size:13px;padding:0}.footer-links a{color:#a7bed5}.footer-links a:hover{color:#d7eaff}.site-footer .footer-copyright{font-size:12px;line-height:1.8;color:#8fa4bb;margin:0;white-space:nowrap}.site-footer>.footer-contact-links{box-sizing:border-box;display:flex;gap:25px;flex-wrap:wrap;align-items:center;width:100%;max-width:1320px;margin:0 auto;padding:0 var(--page-gutter) 28px;font-size:12px;color:#91b9df}.footer-contact-links a:hover{color:#fff}
 @media(max-width:1050px){.site-footer>.footer-inner{gap:25px;flex-wrap:wrap}.site-footer .footer-links{gap:20px}.site-footer .footer-copyright{white-space:normal}}
 @media(max-width:760px){.contact-channels{gap:10px}.contact-details>a{font-size:14px}.contact-details>a>span{font-size:10px}.site-footer>.footer-inner{flex-direction:column;align-items:start;gap:24px;padding-top:30px;padding-bottom:22px}.footer-identity .brand-name{font-size:20px}.footer-identity>p{font-size:12px}.site-footer .footer-links{display:flex;width:100%;gap:23px;font-size:12px}.site-footer .footer-copyright{font-size:11px}.site-footer>.footer-contact-links{justify-content:start;gap:23px;font-size:11px;padding-bottom:28px}}
+
+/* Phone layout: keep navigation, project links and forms easy to tap. */
+@media (max-width: 760px) {
+  :root { --page-gutter: clamp(16px, 5vw, 26px); }
+  .site-nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0 10px;
+    padding-top: 8px;
+  }
+  .site-nav .brand img { width: 36px; height: 36px; }
+  .site-nav .brand-name small { font-size: 7px; }
+  .site-nav .nav-cta { grid-column: 2; grid-row: 1; min-height: 44px; gap: 8px; }
+  .site-nav nav {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    width: 100%;
+    margin-top: 6px;
+    border-top: 1px solid var(--line);
+  }
+  .site-nav nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    gap: 3px;
+    font-size: 12px;
+  }
+  .site-nav nav a span { font-size: 8px; margin: 0; }
+  main section[id] { scroll-margin-top: 114px; }
+
+  .hero { gap: 26px; padding-top: 40px; padding-bottom: 34px; }
+  .hero-topline { display: none; }
+  .hero-kicker { margin-bottom: 15px; }
+  .hero h1 {
+    font-size: clamp(34px, 9.4vw, 54px);
+    line-height: 1.08;
+    margin-bottom: 20px;
+  }
+  .hero-intro { gap: 18px; }
+  .hero-intro > p { font-size: 16px; line-height: 1.65; }
+  .hero-cta-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .hero-cta-row .button {
+    justify-content: center;
+    min-height: 46px;
+    padding: 10px 13px;
+    font-size: 12px;
+    gap: 8px;
+  }
+  .studio-panel { padding: clamp(12px, 4vw, 20px); }
+  .studio-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .studio-tabs button { flex: 1 1 auto; min-height: 44px; padding: 8px; }
+  .studio-canvas { height: clamp(168px, 48vw, 260px); }
+  .studio-preview-copy { padding: 18px 14px; }
+  .studio-preview-copy h2 { font-size: clamp(21px, 6vw, 30px); }
+  .studio-timeline { flex-wrap: wrap; }
+  .studio-foot > p { font-size: 13px; }
+
+  .portfolio-facts { padding-block: 36px 42px; }
+  .section { padding-block: 48px; }
+  .section-intro > p:last-child,
+  .project-short,
+  .service-body p,
+  .benefit-cards p,
+  .process-grid p,
+  .faq-item > p { font-size: 15px; line-height: 1.65; }
+  .project,
+  .project:nth-child(even),
+  .project:last-child { border-radius: 16px; overflow: hidden; }
+  .project .project-visual,
+  .project:nth-child(even) .project-visual {
+    order: 0;
+    aspect-ratio: 16 / 11;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .project .project-info,
+  .project:nth-child(even) .project-info,
+  .project:last-child .project-info { padding: 20px; gap: 12px; }
+  .project-info h3,
+  .project:last-child .project-info h3 { font-size: clamp(23px, 6.6vw, 32px); margin: 8px 0; }
+  .project .live-link,
+  .project:last-child .live-link {
+    display: inline-flex;
+    align-items: center;
+    align-self: start;
+    min-height: 44px;
+    font-size: 13px;
+  }
+  .preview-overlay h3 { font-size: clamp(32px, 10vw, 52px); margin-bottom: 30px; }
+  .about-art { min-height: 300px; }
+  .identity-monogram { font-size: clamp(110px, 36vw, 175px); }
+  .service summary { min-height: 48px; }
+  .service h3 { font-size: clamp(19px, 5.5vw, 24px); }
+  .profit-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .profit-fields input, .brief-form input, .brief-form textarea { font-size: 16px; min-width: 0; }
+  .profit-amount { font-size: clamp(36px, 11vw, 60px); letter-spacing: -.05em; overflow-wrap: anywhere; }
+  .contact-channels > a, .site-footer nav a, .footer-contact-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .detail h1 { font-size: clamp(35px, 11vw, 60px); overflow-wrap: anywhere; }
+}
+
+@media (max-width: 380px) {
+  .process-grid { grid-template-columns: 1fr; }
+}
