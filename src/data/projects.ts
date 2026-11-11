@@ -3,5 +3,18 @@ export const projects = [
  {slug:'construction',title:'PrimeBuild',label:'Construction Website',category:'Architecture · Website concept',url:'https://construction-website-bice-pi.vercel.app/',color:'#dd9b57',image:'/project-1.jpg',word:'BUILD',description:'An architectural construction showcase with project galleries, a before-and-after comparison and an instant estimate interface.',features:['Featured project gallery','Before-and-after comparison','Interactive estimate interface'],tech:[]},
  {slug:'salon',title:'Glitz & Glam',label:'Glitz & Glam Salon',category:'Beauty · Website concept',url:'https://glitz-glam-salon.vercel.app/',color:'#d5a4c5',image:'/project-2.jpg',word:'BLOOM',description:'A beauty and salon experience featuring services, appointment calls to action and a detailed FAQ. The live demo currently uses Luxe & Bloom branding.',features:['Salon service presentation','Appointment entry points','Frequently asked questions'],tech:[]},
  {slug:'veloce',title:'Veloce',label:'Veloce Automotive',category:'Automotive · Website concept',url:'https://veloce-website-azure.vercel.app/',color:'#e96845',image:'/project-3.jpg',word:'VELOCE',description:'An imaginary performance-car brand brought to life through a model catalogue, specifications, gallery and test-drive request interface.',features:['Filterable model catalogue','Vehicle specification displays','Test-drive request interface'],tech:[]},
+ {
+  slug: 'ridgeline-roofing',
+  title: 'Ridgeline Roofing',
+  label: 'Ridgeline Roofing & Exteriors',
+  category: 'Home services · Website concept',
+  url: 'https://ridgeline-roofing-mu.vercel.app/',
+  color: '#e8ad74',
+  image: 'https://ridgeline-roofing-mu.vercel.app/media/hero-800.webp',
+  word: 'RIDGELINE',
+  description: 'A roofing and exteriors website concept with a project gallery, an interactive before-and-after comparison and a dedicated estimate request page.',
+  features: ['Roofing and exterior services', 'Interactive before-and-after comparison', 'Project gallery and estimate request page'],
+  tech: ['Astro'],
+ },
  {slug:'leadpilot',title:'LeadPilot',label:'LeadPilot CRM',category:'Product · Web application',url:'https://leadpilot-astro.vercel.app/app',color:'#8fa8ed',image:null,word:'LEADPILOT',description:'A CRM workspace whose public sign-in page introduces lead imports, quotes and scheduled follow-ups. Workspace functionality requires authentication and has not been independently tested.',features:['Public sign-in interface','Account creation entry point','Lead, quote and follow-up product positioning'],tech:['Astro']},
 ];
